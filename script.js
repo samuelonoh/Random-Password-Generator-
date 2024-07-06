@@ -17,13 +17,12 @@ document.getElementById('mode-toggle').addEventListener('change', (event) => {
 
 let randomPasswordOne = document.getElementById("random-one")
 let randomPasswordTwo = document.getElementById("random-two")
-isLegnthy = 15
 
 function generateRandomPassword() {
     randomPasswordOne.textContent = '';
     randomPasswordTwo.textContent = '';
 
-    for (let i = 0; i < 16; i++) {
+    for (let i = 0; i < 15; i++) {
         let random1 = characters[Math.floor(characters.length * Math.random())];
         let random2 = characters[Math.floor(characters.length * Math.random())];
         console.log(random1 + "..........." + random2);
