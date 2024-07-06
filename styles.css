@@ -1,0 +1,135 @@
+:root {
+    --background-dark: #1e1e1e;
+    --background-light: #f0f4f5;
+    --text-dark: #ffffff;
+    --text-light: #1e1e1e;
+    --button-bg: #28a745;
+    --button-text: #ffffff;
+    --password-bg-dark: #2c2c2c;
+    --password-bg-light: #ffffff;
+    --password-text-dark: #e0e0e0;
+    --password-text-light: #1e1e1e;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.copy {
+    cursor: pointer;
+}
+
+.container {
+    text-align: center;
+}
+
+.card {
+    background-color: var(--background-dark);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.highlight {
+    color: #28a745;
+}
+
+.generate-btn {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.passwords {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.password {
+    background-color: var(--password-bg-dark);
+    color: var(--password-text-dark);
+    padding: 5px 5px;
+    border-radius: 5px;
+    width: 50%;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light mode styles */
+.light-mode {
+    background-color: var(--background-light);
+    color: var(--text-light);
+}
+
+.light-mode .card {
+    background-color: var(--background-light);
+}
+
+.light-mode .password {
+    background-color: var(--password-bg-light);
+    color: var(--password-text-light);
+}
+
+/* Toggle Switch Styles */
+.toggle-switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.toggle-switch label {
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    position: relative;
+}
+
+.toggle-switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+input:checked+.slider {
+    background-color: #28a745;
+}
+
+input:checked+.slider::before {
+    transform: translateX(26px);
+}
